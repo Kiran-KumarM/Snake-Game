@@ -8,9 +8,14 @@ body{
     align-items: center;
     margin: 0;
 }
+.score{
+  height:7vmin;
+  width:100vmin;
+  background-color: #fff;
+}
 .game_board{
     background-color: #ccc;
-    height:100vmin;
+    height:93vmin;
     width:100vmin;
     display: grid;
     grid-template-rows: repeat(25, 1fr);

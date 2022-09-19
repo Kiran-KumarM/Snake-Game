@@ -13,6 +13,8 @@ export class AppComponent implements OnInit{
   currentDirection={x:0,y:0};
   pastDirection={x:0,y:0};
   interval:any;
+  score:number=0;
+  speed:number=150;
 
 ngOnInit(){
  this.board=document.querySelector<HTMLElement>('.game_board');
@@ -38,7 +40,7 @@ this.updateFood();
 updateFrames(){
   this.interval=setInterval(()=>{
     this.updateSnake();
-  },150)
+  },this.speed)
 }
 updateSnake(){
   let snakeBoxArray= document.querySelectorAll<HTMLElement>('.snake')
@@ -49,10 +51,37 @@ for(let z=0;z<this.snakeBodyArray.length;z++){
   snakeBoxArray[z].style.gridRowStart = String(this.snakeBodyArray[z].y )
   snakeBoxArray[z].style.gridColumnStart = String(this.snakeBodyArray[z].x)
 }
+this.score=this.snakeBodyArray.length-1
 this.foodEaten();
-this.stopGame()
+this.stopGame();
+this.updateSpeed();
 }
-
+updateSpeed(){
+  let updatedspeed=150;
+  if(this.score>10){
+    updatedspeed=140;
+  }
+  else if(this.score>25){
+    updatedspeed=125;
+  }
+  else if(this.score>50){
+    updatedspeed=115;
+  }
+  else if(this.score>150){
+    updatedspeed=100;
+  }
+  else if(this.score>250){
+    updatedspeed=90;
+  }
+  if(updatedspeed != this.speed){
+    this.newframeSpeed(updatedspeed)
+  }
+}
+newframeSpeed(speed:number){
+  clearInterval(this.interval);
+  this.speed=speed;
+  this.updateFrames();
+}
 updateFood(){
 let foodPosition=this.getRandomPosition();
 if((this.snakeBodyArray.findIndex(x=> (x.x==foodPosition.x && x.y==foodPosition.y)))== -1){
