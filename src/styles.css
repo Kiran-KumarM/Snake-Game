@@ -31,7 +31,7 @@ body{
 }
 
 .snake {
-    background-color:#40e345;
+    background-color:black;
     border: .25vmin solid black;
     transition: all linear .1s;
     z-index:2;
