@@ -1,11 +1,14 @@
+.buttons__wrapper {
+  position: relative;
+  height: calc(100vh - 93vmin);
+}
 .virtual__buttons {
   grid-template-columns: min-content min-content min-content;
   gap: 1rem;
   align-items: center;
   justify-content: center;
-  margin-top: 10px;
   position: absolute;
-  bottom: 1rem;
+  top: 2rem;
   left: 0;
   right: 0;
 }
@@ -14,14 +17,14 @@
 }
 .key__button {
   box-sizing: border-box;
-  line-height: 50px;
+  line-height: 65px;
   font-size: 22px;
   text-align: center;
-  width: 60px;
+  width: 75px;
   color: #555;
   cursor: pointer;
   margin: 0 8px;
-  height: 50px;
+  height: 65px;
   border-color: #f2f2f2;
   border-style: solid;
   text-shadow: 0 0.5px 1px #777, 0 2px 6px #f2f2f2;
