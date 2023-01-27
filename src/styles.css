@@ -1,16 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
-body{
-    background-color: black;
-    height:100vh;
-    width:100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
+body {
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
 }
-.score{
-  height:7vmin;
-  width:100vmin;
+.score {
+  height: 7vmin;
+  width: 100vmin;
   display: flex;
   padding: 10px 10px 10px 10px;
   justify-content: center;
@@ -21,24 +21,30 @@ body{
   border-bottom: 2px solid black;
   background-color: #aacbcd;
 }
-.game_board{
-    background-color: #ccc;
-    height:93vmin;
-    width:100vmin;
-    display: grid;
-    grid-template-rows: repeat(25, 1fr);
-    grid-template-columns: repeat(25, 1fr);
+.game_board {
+  background-color: #ccc;
+  height: 93vmin;
+  width: 100vmin;
+  display: grid;
+  grid-template-rows: repeat(25, 1fr);
+  grid-template-columns: repeat(25, 1fr);
 }
 
 .snake {
-    background-color:#40e345;
-    border: .25vmin solid black;
-    transition: all linear .1s;
-    z-index:2;
-  }
+  background-color: #40e345;
+  border: 0.25vmin solid black;
+  transition: all linear 0.1s;
+  z-index: 2;
+}
 
-  .food {
-    background-color: #ff7a00;
-    border: .25vmin solid black;
-    z-index:1;
+.food {
+  background-color: #ff7a00;
+  border: 0.25vmin solid black;
+  z-index: 1;
+}
+
+@media screen and (max-width: 520px) {
+  body {
+    align-items: flex-start;
   }
+}

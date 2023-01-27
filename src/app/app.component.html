@@ -1,2 +1,8 @@
-<div class="score">YOUR SCORE : {{score}}</div>
+<div class="score">YOUR SCORE : {{ score }}</div>
 <div class="game_board"></div>
+<div class="virtual__buttons">
+  <div class="key__button" (click)="onVirtualClick('ArrowUp')">up</div>
+  <div class="key__button" (click)="onVirtualClick('ArrowLeft')">left</div>
+  <div class="key__button" (click)="onVirtualClick('ArrowDown')">down</div>
+  <div class="key__button" (click)="onVirtualClick('ArrowRight')">right</div>
+</div>
