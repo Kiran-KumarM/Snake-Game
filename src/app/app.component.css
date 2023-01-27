@@ -1,5 +1,4 @@
 .virtual__buttons {
-  display: grid;
   grid-template-columns: min-content min-content min-content;
   gap: 1rem;
   align-items: center;
