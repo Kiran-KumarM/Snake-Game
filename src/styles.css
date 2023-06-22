@@ -42,14 +42,17 @@ body {
   border: 0.25vmin solid black;
   z-index: 1;
 }
-.virtual__buttons {
+.buttons__wrapper {
   display: none;
+}
+.virtual__buttons {
+  display: grid;
 }
 @media screen and (max-width: 520px) {
   body {
     align-items: flex-start;
   }
-  .virtual__buttons {
-    display: grid;
+  .buttons__wrapper {
+    display: block;
   }
 }
